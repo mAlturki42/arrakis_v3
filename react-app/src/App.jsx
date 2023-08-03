@@ -1,8 +1,10 @@
-import React from "react";
-import { Pets } from "./components/pets/Pets";
+import './App.css';
+import Bondlogin from './components/Bondlogin';
 
-const App = () => {
-  return <Pets />;
-};
+function App() {
+  return (
+    <Bondlogin/>
+  );
+}
 
 export default App;
