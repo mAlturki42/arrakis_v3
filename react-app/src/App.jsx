@@ -1,6 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import HomePage from './components/HomePage';
+import React from "react";
+import { Pets } from "./components/pets/Pets";
 
 function App() {
   return (
