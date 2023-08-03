@@ -1,10 +1,15 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React from "react";
+import React, { useState } from "react";
 import './App.css';
 import Bondlogin from "./components/Bondlogin"
 import HomePage from "./components/HomePage";
 
-const App = () => {
+function App() {
+  const [token, setToken] = useState();
+
+  if (!token){
+    return <Bondlogin setToken={setToken} />
+  }
   return <HomePage />;
 };
 
