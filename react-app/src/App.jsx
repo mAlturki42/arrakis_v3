@@ -1,10 +1,12 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from "react";
+import './App.css';
 import Bondlogin from "./components/Bondlogin"
+import HomePage from "./components/HomePage";
 
-function App() {
-  return (
-    <Bondlogin/>
-  );
-}
+const App = () => {
+  return <HomePage />;
+};
+
 
 export default App;
