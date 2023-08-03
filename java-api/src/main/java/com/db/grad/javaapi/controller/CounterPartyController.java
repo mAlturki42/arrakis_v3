@@ -21,9 +21,9 @@ public class CounterPartyController {
     private CounterPartyHandler counterPartyService;
 
     @Autowired
-    public CounterPartyController(CounterPartyHandler ds)
+    public CounterPartyController(CounterPartyHandler cps)
     {
-        counterPartyService = ds;
+        counterPartyService = cps;
     }
 
     @GetMapping("/book")

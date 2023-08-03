@@ -20,9 +20,9 @@ public class UserController {
     private UserHandler userService;
 
     @Autowired
-    public UserController(UserHandler ds)
+    public UserController(UserHandler uh)
     {
-        userService = ds;
+        userService = uh;
     }
 
     @GetMapping("/user")

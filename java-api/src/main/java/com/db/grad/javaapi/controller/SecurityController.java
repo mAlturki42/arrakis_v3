@@ -21,9 +21,9 @@ public class SecurityController {
     private SecurityHandler securityService;
 
     @Autowired
-    public SecurityController(SecurityHandler ds)
+    public SecurityController(SecurityHandler sh)
     {
-        securityService = ds;
+        securityService = sh;
     }
 
     @GetMapping("/security")

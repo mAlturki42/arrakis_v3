@@ -14,9 +14,9 @@ public class TradesController {
     private TradesHandler tradesService;
 
     @Autowired
-    public TradesController(TradesHandler ds)
+    public TradesController(TradesHandler th)
     {
-        tradesService = ds;
+        tradesService = th;
     }
 
     @GetMapping("/trades")

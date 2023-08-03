@@ -20,9 +20,9 @@ public class BookuserController {
     private BookuserHandler bookuserService;
 
     @Autowired
-    public BookuserController(BookuserHandler ds)
+    public BookuserController(BookuserHandler bh)
     {
-        bookuserService = ds;
+        bookuserService = bh;
     }
 
     @GetMapping("/book_user")
