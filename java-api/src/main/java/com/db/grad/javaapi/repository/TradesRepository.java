@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface TradesRepository extends JpaRepository<Trades, Long>
 {
-    @Query(nativeQuery = true, value = "select * from trades where name = :name")
+    @Query(nativeQuery = true, value = "select * from trades")
     List<Trades> findAll();
 }

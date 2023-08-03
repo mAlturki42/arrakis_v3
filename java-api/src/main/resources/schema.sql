@@ -1,5 +1,25 @@
 DROP ALL OBJECTS;
 
+CREATE TABLE Bonds (
+  trade_type VARCHAR(255) NOT NULL,
+  trade_currency varchar(10) NOT NULL,
+  quantity int NOT NULL,
+  settlement_date VARCHAR(255) NOT NULL,
+  trade_status varchar(32) NOT NULL,
+  trade_date VARCHAR(255) NOT NULL,
+  unit_price float NOT NULL,
+  coupon_percent float NOT NULL,
+  bond_currency VARCHAR(10) NOT NULL,
+  cusip varchar(50) DEFAULT NULL,
+  face_value float NOT NULL,
+  isin varchar(50) DEFAULT NULL,
+  issuer_name varchar(255) NOT NULL,
+  maturity_date VARCHAR(255) NOT NULL,
+  status varchar(32) NOT NULL,
+  type VARCHAR(255) NOT NULL,
+  book_name VARCHAR(255) NOT NULL,
+  bond_holder VARCHAR(255) NOT NULL
+);
 
 CREATE TABLE book (
   id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
