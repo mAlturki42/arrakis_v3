@@ -9,13 +9,6 @@ import Bondlogin from "./components/Bondlogin"
 import Summary from './components/Summary';
 
 
-function setToken(userToken){
-  sessionStorage.setItem('token', JSON.stringify(userToken));
-}
-
-function getToken(){
-}
-
 function App() {
   const [token, setToken] = useState();
 
