@@ -26,7 +26,7 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Switch>
-          <Route path="/homepage">
+          <Route path="">
             <HomePage />
           </Route>
           <Route path="/summary">
