@@ -1,4 +1,4 @@
-/* import React, { useState } from "react";
+import React, { useState } from "react";
 import PropTypes from 'prop-types'; 
 
 async function loginUser(credentials){
@@ -26,23 +26,22 @@ export default function BondLogin({ setToken }) {
     }
 
     return(
-        <><head>
-            <title>Bond Challenge Login</title>
-        </head><body>
-                <fieldset> <div class="title">
-                    <h1><center>Bond Tracking</center></h1>
-                    <p><strong><center>Bond Investigtion Tool- User Login</center></strong></p>
-                </div>
-                    <br></br>
-                    <label><strong>UserName:</strong></label>
-                    <input type="text" name="username" placeholder= "username" required onChange={e => setUserName(e.target.value)}/>
-                    <br></br>
-                    <label><strong>Password:</strong></label>
-                    <input type="text" name="password" placeholder= "password" required onChange={e => setPassword(e.target.value)}/>
-                    <div className="button-container">
-                    <input type="submit" />
-                    </div>
-                </fieldset> </body></>
+        <div className="login-wrapper">
+        <h1>Please Log In</h1>
+        <form onSubmit={handleSubmit}>
+          <label>
+            <p>Username</p>
+            <input type="text" onChange={e => setUserName(e.target.value)} />
+          </label>
+          <label>
+            <p>Password</p>
+            <input type="password" onChange={e => setPassword(e.target.value)} />
+          </label>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
 
     )
 }
@@ -50,4 +49,4 @@ export default function BondLogin({ setToken }) {
 
 Login.PropTypes = {
     setToken: PropTypes.func.isRequired
-} */
+}

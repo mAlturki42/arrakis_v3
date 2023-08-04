@@ -5,6 +5,11 @@ import Bondlogin from "./components/Bondlogin"
 import HomePage from "./components/HomePage";
 
 function App() {
+  const [token, setToken] = useState();
+
+  if (!token){
+    return <Bondlogin setToken={setToken} />
+  }
   return <HomePage />;
 };
 
