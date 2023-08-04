@@ -2,7 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const app = express();
 
-app.use('/login', (req, res) => {
+app.use(cors());
+
+app.use('/bondlogin', (req, res) => {
     res.send({
         token: 'test123'
     });
