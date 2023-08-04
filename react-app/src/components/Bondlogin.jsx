@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 async function loginUser(credentials){
     return fetch('https://localhost:8080/login',{
-        method: POST,
+        method: 'POST',
         headers: {
             'content-Type': 'application/json'
         },
@@ -47,6 +47,6 @@ export default function BondLogin({ setToken }) {
 }
 
 
-Login.PropTypes = {
+BondLogin.propTypes = {
     setToken: PropTypes.func.isRequired
 }
