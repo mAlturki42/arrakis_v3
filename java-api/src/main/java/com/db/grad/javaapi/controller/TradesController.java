@@ -11,9 +11,10 @@ import java.util.List;
 @RequestMapping("/api/v1")
 @CrossOrigin(origins = "http://localhost:3000")
 public class TradesController {
+    @Autowired
     private TradesHandler tradesService;
 
-    @Autowired
+
     public TradesController(TradesHandler ds)
     {
         tradesService = ds;
@@ -21,6 +22,7 @@ public class TradesController {
 
     @GetMapping("/trades")
     public List <Trades> getAllTrades() {
+        System.out.println("Test");
         return tradesService.getAllTrades();
     }
 
