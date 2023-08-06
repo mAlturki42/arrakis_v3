@@ -26,19 +26,23 @@ const HomePage = () => {
             id="noanim-tab-example"
             className="mb-3"
             >
-            <Tab eventKey="option1" title="option 1">
+            <Tab eventKey="option1" title="Active bonds">
                 Tab content for option 1
             </Tab>
-            <Tab eventKey="option2" title="option 2">
-                Tab content for option 2
+            <Tab eventKey="option2" title="My bonds">
+                Tab content for option 1
             </Tab>
-            <Tab eventKey="option3" title="option 3">
+            <Tab eventKey="option3" title="Bonds due for maturity">
+                A table for bonds due for maturity within the last 5 days. 
+                A table for bonds due for maturity within the next 5 days.
+            </Tab>
+            <Tab eventKey="option4" title="Bonds by ISIN">
                 Tab content for option 3
             </Tab>
-            <Tab eventKey="option4" title="option 4">
+            <Tab eventKey="option5" title="Bonds by CUSIP">
                 Tab content for option 4
             </Tab>
-            <Tab eventKey="option5" title="option 5">
+            <Tab eventKey="option6" title="Bonds' issuers and owners">
                 Tab content for option 5
             </Tab>
             </Tabs>
