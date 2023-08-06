@@ -1,12 +1,11 @@
 import React from 'react';
+import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
-
-
-
+import Table from 'react-bootstrap/Table'
 
 const HomePage = () => {
     return (
@@ -27,7 +26,17 @@ const HomePage = () => {
             className="mb-3"
             >
             <Tab eventKey="option1" title="Active bonds">
-                Tab content for option 1
+                <Table striped border hover>
+                    <thread>
+                        <tr>
+                            <th></th>
+                            <th>Bond name</th>
+                            <th>Issuer</th>
+                            <th>Due date</th>
+                        </tr>
+                    </thread>
+                    
+                </Table>
             </Tab>
             <Tab eventKey="option2" title="My bonds">
                 Tab content for option 1
