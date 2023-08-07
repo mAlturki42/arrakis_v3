@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RestController
@@ -31,7 +32,7 @@ public class SecurityController {
         return securityService.getAllSecurity();
     }
     @GetMapping("/security/display5")
-    public List <Security> getSecurityWithin5Days() {
+    public List <Security> getSecurityWithin5Days() throws ParseException {
         return securityService.getSecurityWithin5Days();
     }
 
