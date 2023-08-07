@@ -49,9 +49,11 @@ const HomePage = () => {
                     <thread>
                         <tr>
                             <th></th>
-                            <th>Bond name</th>
-                            <th>Issuer</th>
-                            <th>Due date</th>
+                            <th>Bond status</th>
+                            <th>Bond type</th>
+                            <th>Bond currency</th>
+                            <th>Bond holder</th>
+                            <th>Bond maturity date</th>
                         </tr>
                     </thread>
                     {/* <tbody>
@@ -68,11 +70,76 @@ const HomePage = () => {
                 </Table>
             </Tab>
             <Tab eventKey="option2" title="My bonds">
-                Tab content for option 1
+            <Table striped border hover>
+                    <thread>
+                        <tr>
+                            <th></th>
+                            <th>Bond status</th>
+                            <th>Bond type</th>
+                            <th>Bond currency</th>
+                            <th>Bond holder</th>
+                            <th>Bond maturity date</th>
+                        </tr>
+                    </thread>
+                    {/* <tbody>
+                        {data.map((item,index) =>(
+                            <tr>{index+1}>
+                            <td>{item.column1}</td>
+                            <td>{item.column2}</td>
+                            <td>{item.column3}</td>
+                        </tr>
+
+                        ))}
+                    </tbody> */}
+                    
+                </Table>
             </Tab>
             <Tab eventKey="option3" title="Bonds due for maturity">
-                A table for bonds due for maturity within the last 5 days. 
-                A table for bonds due for maturity within the next 5 days.
+            <Table striped border hover>
+                    <thread>
+                        <tr>
+                            <th></th>
+                            <th>Bond status</th>
+                            <th>Bond type</th>
+                            <th>Bond currency</th>
+                            <th>Bond holder</th>
+                            <th>Bond maturity date</th>
+                        </tr>
+                    </thread>
+                    {/* <tbody>
+                        {data.map((item,index) =>(
+                            <tr>{index+1}>
+                            <td>{item.column1}</td>
+                            <td>{item.column2}</td>
+                            <td>{item.column3}</td>
+                        </tr>
+
+                        ))}
+                        </tbody> */}
+                </Table>
+                <Table striped border hover>
+                    <thread>
+                        <tr>
+                            <th></th>
+                            <th>Bond status</th>
+                            <th>Bond type</th>
+                            <th>Bond currency</th>
+                            <th>Bond holder</th>
+                            <th>Bond maturity date</th>
+                        </tr>
+                    </thread>
+                    {/* <tbody>
+                        {data.map((item,index) =>(
+                            <tr>{index+1}>
+                            <td>{item.column1}</td>
+                            <td>{item.column2}</td>
+                            <td>{item.column3}</td>
+                        </tr>
+
+                        ))}
+                    </tbody> */}
+                    
+                </Table>
             </Tab>
             <Tab eventKey="option4" title="Bonds by ISIN">
                 Tab content for option 3
