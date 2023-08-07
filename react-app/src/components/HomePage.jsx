@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { findBookusers } from "../services/bond-service"
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,23 +9,30 @@ import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table';
 
 
-/* const fetchData = async () =>{
-    try{
-        const response = await axios.get('/api/data');
-        return response.data;
-    }catch (error){
-        console.error('Error fetching data: ', error);
-        return [];
-    }
-};
-
 const DataTable = () => {
-    const [data, setData] = useState([]);
-}
+    const [bookusers, setBookusers] = useState([]);
+
+
 
 useEffect(() => {
-    fetchData().then((featchedData) => setData(featchedData));
-},[]); */
+    findBookusers()
+    .then(({data}) => {
+        setBookusers(data);
+    });
+},[]);
+
+
+return (
+    <>
+    { bookusers.map(bookuser =>
+        <div>
+            <div>User Id: {bookuser.user_id}</div>
+            <div>Book Id:  {bookuser.book_id}</div>
+        </div>)
+        }
+    </>
+    )
+};
 
 const HomePage = () => {
     return (
@@ -56,7 +64,7 @@ const HomePage = () => {
                             <th>Bond maturity date</th>
                         </tr>
                     </thread>
-                    {/* <tbody>
+                    { <tbody>
                         {data.map((item,index) =>(
                             <tr>{index+1}>
                             <td>{item.column1}</td>
@@ -65,7 +73,7 @@ const HomePage = () => {
                         </tr>
 
                         ))}
-                    </tbody> */}
+                    </tbody> }
                     
                 </Table>
             </Tab>
@@ -90,7 +98,7 @@ const HomePage = () => {
                         </tr>
 
                         ))}
-                    </tbody> */}
+                    </tbody> 
                     
                 </Table>
             </Tab>
@@ -106,7 +114,7 @@ const HomePage = () => {
                             <th>Bond maturity date</th>
                         </tr>
                     </thread>
-                    {/* <tbody>
+                    <tbody>
                         {data.map((item,index) =>(
                             <tr>{index+1}>
                             <td>{item.column1}</td>
@@ -115,7 +123,7 @@ const HomePage = () => {
                         </tr>
 
                         ))}
-                        </tbody> */}
+                        </tbody>
                 </Table>
                 <Table striped border hover>
                     <thread>
@@ -137,7 +145,7 @@ const HomePage = () => {
                         </tr>
 
                         ))}
-                    </tbody> */}
+                    </tbody> 
                     
                 </Table>
             </Tab>
