@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,6 +7,24 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table';
 
+
+/* const fetchData = async () =>{
+    try{
+        const response = await axios.get('/api/data');
+        return response.data;
+    }catch (error){
+        console.error('Error fetching data: ', error);
+        return [];
+    }
+};
+
+const DataTable = () => {
+    const [data, setData] = useState([]);
+}
+
+useEffect(() => {
+    fetchData().then((featchedData) => setData(featchedData));
+},[]); */
 
 const HomePage = () => {
     return (
@@ -36,6 +54,16 @@ const HomePage = () => {
                             <th>Due date</th>
                         </tr>
                     </thread>
+                    {/* <tbody>
+                        {data.map((item,index) =>(
+                            <tr>{index+1}>
+                            <td>{item.column1}</td>
+                            <td>{item.column2}</td>
+                            <td>{item.column3}</td>
+                        </tr>
+
+                        ))}
+                    </tbody> */}
                     
                 </Table>
             </Tab>
