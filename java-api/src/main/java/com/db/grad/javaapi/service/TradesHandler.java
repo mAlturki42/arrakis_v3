@@ -1,30 +1,31 @@
 package com.db.grad.javaapi.service;
 
-import com.db.grad.javaapi.model.Dog;
-import com.db.grad.javaapi.repository.DogsRepository;
+import com.db.grad.javaapi.model.Trades;
+import com.db.grad.javaapi.repository.TradesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class DogHandler implements IDogsService
+public class TradesHandler implements ITradesService
 {
-    private DogsRepository itsDogsRepo;
-
     @Autowired
-    public DogHandler( DogsRepository dogRepo )
+    private TradesRepository itsTradesRepo;
+
+
+    public TradesHandler( TradesRepository tradeRepo )
     {
-        itsDogsRepo = dogRepo;
+        itsTradesRepo = tradeRepo;
     }
 
     @Override
-    public List<Dog> getAllDogs()
+    public List<Trades> getAllTrades()
     {
-        return itsDogsRepo.findAll();
+        return itsTradesRepo.findAll();
     }
 
+    /*
     @Override
     public Dog addDog(Dog theDog)
     {
@@ -76,5 +77,5 @@ public class DogHandler implements IDogsService
     public Dog updateDogDetails(Dog dogToUpdate)
     {
         return itsDogsRepo.save( dogToUpdate );
-    }
+    }*/
 }

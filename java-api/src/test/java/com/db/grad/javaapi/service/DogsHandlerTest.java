@@ -18,6 +18,13 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
+
+
+
+
+
+
+/*
 @ExtendWith(MockitoExtension.class)
 public class DogsHandlerTest
 {
@@ -282,4 +289,4 @@ public class DogsHandlerTest
         // assert
         assertEquals( expectedDog, actualDog );
     }
-}
+}*/
