@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState } from "react";
 import './App.css';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
 import HomePage from "./components/HomePage"
@@ -18,14 +18,14 @@ function App() {
   return(
     <div className="wrapper">
       <BrowserRouter>
-        <Switch>
+        <Routes>
           <Route path="">
             <HomePage />
           </Route>
           <Route path="/summary">
             <Summary />
           </Route>
-        </Switch>
+        </Routes>
       </BrowserRouter>
     </div>
   );
