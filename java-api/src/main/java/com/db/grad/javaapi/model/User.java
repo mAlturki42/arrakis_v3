@@ -1,8 +1,9 @@
 package com.db.grad.javaapi.model;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "user")
@@ -12,6 +13,10 @@ public class User {
     private String name;
     private String email;
     private String role;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "bookUsers")
+    private Set<Book> books = new HashSet<>();
 
     @Id
     @Column(name= "id", nullable = false)
@@ -49,5 +54,3 @@ public class User {
         this.role = role;
     }
 }
-
-
