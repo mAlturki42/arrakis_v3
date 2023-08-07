@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './Bondlogin.css';
 
 async function loginUser(credentials) {
-    return fetch('http://localhost:8080/bondlogin', {
+    return fetch('http://localhost:3000/bondlogin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

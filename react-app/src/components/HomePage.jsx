@@ -7,32 +7,7 @@ import Nav from 'react-bootstrap/Nav';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table';
-
-
-const DataTable = () => {
-    const [bookusers, setBookusers] = useState([]);
-
-
-
-useEffect(() => {
-    findBookusers()
-    .then(({data}) => {
-        setBookusers(data);
-    });
-},[]);
-
-
-return (
-    <>
-    { bookusers.map(bookuser =>
-        <div>
-            <div>User Id: {bookuser.user_id}</div>
-            <div>Book Id:  {bookuser.book_id}</div>
-        </div>)
-        }
-    </>
-    )
-};
+import { DataBookusers } from './Bookusers';
 
 const HomePage = () => {
     return (
@@ -64,16 +39,6 @@ const HomePage = () => {
                             <th>Bond maturity date</th>
                         </tr>
                     </thread>
-                    { <tbody>
-                        {data.map((item,index) =>(
-                            <tr>{index+1}>
-                            <td>{item.column1}</td>
-                            <td>{item.column2}</td>
-                            <td>{item.column3}</td>
-                        </tr>
-
-                        ))}
-                    </tbody> }
                     
                 </Table>
             </Tab>
@@ -88,21 +53,12 @@ const HomePage = () => {
                             <th>Bond holder</th>
                             <th>Bond maturity date</th>
                         </tr>
-                    </thread>
-                    {/* <tbody>
-                        {data.map((item,index) =>(
-                            <tr>{index+1}>
-                            <td>{item.column1}</td>
-                            <td>{item.column2}</td>
-                            <td>{item.column3}</td>
-                        </tr>
-
-                        ))}
-                    </tbody> 
+                    </thread> 
                     
                 </Table>
             </Tab>
             <Tab eventKey="option3" title="Bonds due for maturity">
+                <DataBookusers tab="option0" />
             <Table striped border hover>
                     <thread>
                         <tr>
@@ -114,16 +70,7 @@ const HomePage = () => {
                             <th>Bond maturity date</th>
                         </tr>
                     </thread>
-                    <tbody>
-                        {data.map((item,index) =>(
-                            <tr>{index+1}>
-                            <td>{item.column1}</td>
-                            <td>{item.column2}</td>
-                            <td>{item.column3}</td>
-                        </tr>
-
-                        ))}
-                        </tbody>
+                    
                 </Table>
                 <Table striped border hover>
                     <thread>
@@ -136,17 +83,6 @@ const HomePage = () => {
                             <th>Bond maturity date</th>
                         </tr>
                     </thread>
-                    {/* <tbody>
-                        {data.map((item,index) =>(
-                            <tr>{index+1}>
-                            <td>{item.column1}</td>
-                            <td>{item.column2}</td>
-                            <td>{item.column3}</td>
-                        </tr>
-
-                        ))}
-                    </tbody> 
-                    
                 </Table>
             </Tab>
             <Tab eventKey="option4" title="Bonds by ISIN">
