@@ -34,7 +34,7 @@ export const Mybonds = () => {
     <table className="table table-bordered">
       <thead className="thread-dark">
         <tr>
-          <th>ID</th>
+          <th>Issuer ID</th>
           <th>Issuer</th>
           <th>ISIN</th>
           <th>CUSIP</th>
