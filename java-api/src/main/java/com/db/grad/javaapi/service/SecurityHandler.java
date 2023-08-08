@@ -36,4 +36,8 @@ public class SecurityHandler implements ISecurityService {
         return itsSecurityRepo.findActiveBonds();
     }
 
+    public List<Security>  getBondsBooksResponsibleFor() {
+        return itsSecurityRepo.findBondsBooksResponsibleFor();
+    }
+
 }

@@ -27,4 +27,9 @@ public interface SecurityRepository extends JpaRepository<Security, Long> {
             "WHERE s.maturity_date > '2021-01-01'")
     List<Security> findActiveBonds();
 
+    @Query(nativeQuery = true, value = "SELECT security.* FROM security " +
+            "JOIN trades ON security.id = trades.security_id " +
+            "JOIN book_user ON trades.book_id = book_user.book_id " +
+            "WHERE book_user.user_id = 3")
+    List<Security> findBondsBooksResponsibleFor();
 }
