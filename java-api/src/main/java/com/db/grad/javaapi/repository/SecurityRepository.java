@@ -23,7 +23,6 @@ public interface SecurityRepository extends JpaRepository<Security, Long> {
     List<Security> findMaturedBondsForUser();
 
     @Query(nativeQuery = true, value = "SELECT DISTINCT s.* FROM security s \n" +
-            "INNER JOIN trades t ON s.id = t.security_id \n" +
             "WHERE s.maturity_date > '2021-01-01'")
     List<Security> findActiveBonds();
 
