@@ -19,9 +19,9 @@ export const Activebonds = () => {
     <>
     <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/">Bonds Tracker</Navbar.Brand>
+          <Navbar.Brand as={Link} to="/home">Bonds Tracker</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to="/">My bonds</Nav.Link>
+            <Nav.Link as={Link} to="/my-bonds">My bonds</Nav.Link>
             <Nav.Link as={Link} to="/all-bonds">All bonds</Nav.Link>
             <Nav.Link as={Link} to="/active-bonds">Active bonds</Nav.Link>
             <Nav.Link as={Link} to="/bonds-maturity">Bonds by maturity</Nav.Link>
@@ -50,6 +50,7 @@ export const Activebonds = () => {
       <tbody>
         {activebonds.map((activebond) => (
           <tr key={activebond.id}>
+            <td>{activebond.id}</td>
             <td>{activebond.issuer_name}</td>
             <td>{activebond.isin}</td>
             <td>{activebond.cusip}</td>
