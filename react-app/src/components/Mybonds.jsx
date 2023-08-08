@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { findActivebonds } from "../services/ActivebondsServices";
+import { findMybonds} from "../services/MybondsServices";
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 
-
-export const Activebonds = () => {
-    const [activebonds, setActivebonds] = useState([]);
+export const Mybonds = () => {
+    const [mybonds, setMybonds] = useState([]);
 
     useEffect(() => {
-        findActivebonds()
+        findMybonds()
             .then(({data}) => {
-            setActivebonds(data);
+            setMybonds(data);
             });
     }, []);
   return (
@@ -46,26 +45,26 @@ export const Activebonds = () => {
           <th>Currency</th>
           <th>Status</th>
         </tr>
-      </thead>
-      <tbody>
-        {activebonds.map((activebond) => (
-          <tr key={activebond.id}>
-            <td>{activebond.issuer_name}</td>
-            <td>{activebond.isin}</td>
-            <td>{activebond.cusip}</td>
-            <td>{activebond.maturity_date}</td>
-            <td>{activebond.type}</td>
-            <td>{activebond.coupon}</td>
-            <td>{activebond.face_value}</td>
-            <td>{activebond.currency}</td>
-            <td>{activebond.status}</td>
+        </thead>
+      {/* <tbody >
+        {mybonds.map((bond) => (
+          <tr key={bond.id}>
+            <td>{bond.issuer_name}</td>
+            <td>{bond.isin}</td>
+            <td>{bond.cusip}</td>
+            <td>{bond.maturity_date}</td>
+            <td>{bond.type}</td>
+            <td>{bond.coupon}</td>
+            <td>{bond.face_value}</td>
+            <td>{bond.currency}</td>
+            <td>{bond.status}</td>
 
           </tr>
         ))}
-      </tbody>
-    </table>
+        </tbody> */}
+      </table>
     </div>
-    </div>
-    </>
+  </div>
+  </>
   )
 };

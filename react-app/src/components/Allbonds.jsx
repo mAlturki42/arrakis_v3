@@ -32,7 +32,7 @@ export const Allbonds = () => {
     <div className="container mt-4">
     <div className="table-responsive">
     <table className="table table-bordered">
-      <thread className="thread-dark">
+      <thead className="thread-dark">
         <tr>
           <th>ID</th>
           <th>Issuer</th>
@@ -45,7 +45,7 @@ export const Allbonds = () => {
           <th>Currency</th>
           <th>Status</th>
         </tr>
-        </thread>
+        </thead>
       <tbody >
         {allbonds.map((allbond) => (
           <tr key={allbond.id}>

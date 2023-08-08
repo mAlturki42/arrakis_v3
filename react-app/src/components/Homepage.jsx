@@ -18,6 +18,10 @@ function Homepage() {
           </Nav>
         </Container>
       </Navbar>
+
+      <div className='container mt-4'>
+        <h1>Welcome to Bonds Tracker!</h1>
+      </div>
     </>
   );
 }

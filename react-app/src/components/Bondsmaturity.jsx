@@ -32,7 +32,7 @@ export const Bondsmaturity = () => {
     <div className="container mt-4">
     <div className="table-responsive">
     <table className="table table-bordered">
-      <thread className="thread-dark">
+      <thead className="thread-dark">
         <tr>
           <th>ID</th>
           <th>Issuer</th>
@@ -45,7 +45,7 @@ export const Bondsmaturity = () => {
           <th>Currency</th>
           <th>Status</th>
         </tr>
-        </thread>
+        </thead>
       <tbody >
         {bondsmaturity.map((bond) => (
           <tr key={bond.id}>
