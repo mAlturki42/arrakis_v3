@@ -6,11 +6,14 @@ import { Bondsmaturity } from './components/Bondsmaturity';
 import {  Activebonds } from './components/Activebonds';
 import { Allbonds } from './components/Allbonds';
 import { Mybonds } from './components/Mybonds';
+import Login  from './components/Login';
+
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={Homepage}/>
+        <Route path="home" exact component={Homepage}/>
+        <Route path="/" exact component={Login}/>
         <Route path="/my-bonds" exact component={Mybonds}/>
         <Route path="/all-bonds" exact component={Allbonds}/>
         <Route path="/active-bonds" exact component={Activebonds}/>
