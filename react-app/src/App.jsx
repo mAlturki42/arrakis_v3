@@ -1,13 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import React from "react";
+import {BrowserRouter as Router,Route, Switch} from 'react-router-dom';
 import Homepage from "./components/Homepage";
-import { Allbonds } from './components/Allbonds';
 import { Bondsmaturity } from './components/Bondsmaturity';
-import { Aactivebonds, Activebonds } from './components/Activebonds';
-
+import {  Activebonds } from './components/Activebonds';
+import { Allbonds } from './components/Allbonds';
 const App = () => {
-  return <Activebonds/>;
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={Homepage}/>
+        <Route path="/all-bonds" exact component={Allbonds}/>
+        <Route path="/active-bonds" exact component={Activebonds}/>
+        <Route path="/bonds-maturity" exact component={Bondsmaturity}/>
+
+      </Switch>
+    </Router>
+  )
 };
 
 export default App;
