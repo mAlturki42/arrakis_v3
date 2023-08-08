@@ -13,4 +13,6 @@ public interface ISecurityService {
     public List<Security> getMaturedBondsForUser();
 
     public List<Security> getActiveBonds();
+
+    public List<Security> getBondsBooksResponsibleFor();
 }

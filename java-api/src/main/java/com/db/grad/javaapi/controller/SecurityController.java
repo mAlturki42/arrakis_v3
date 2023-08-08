@@ -40,4 +40,10 @@ public class SecurityController {
     public List<Security> getActiveBonds() {
         return securityService.getActiveBonds();
     }
+
+    @GetMapping("/bondsBooksResponsibleFor")
+    public List<Security> getBondsBooksResponsibleFor() {
+        return securityService.getBondsBooksResponsibleFor();
+    }
+
 }
