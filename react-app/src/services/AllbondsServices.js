@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 export const findAllbonds = () => {
-  const allbonds = axios.get(`${hostNameUrl}/...`);
+  const allbonds = axios.get(`${hostNameUrl}/security`);
   return allbonds;
   
 

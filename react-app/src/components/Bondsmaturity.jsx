@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { findBondsmaturity } from "../services/BondsmaturityServices";
 
 export const Bondsmaturity = () => {
-    const [bondsmaturity, setBondmaturity] = useState([]);
+    const [bondsmaturity, setBondsmaturity] = useState([]);
 
     useEffect(() => {
         findBondsmaturity()
